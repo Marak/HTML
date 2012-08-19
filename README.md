@@ -143,7 +143,6 @@ That's it. Conditional logic propositions shouldn't exist in the View.
   <div class="guest">
     <p>Hello Guest</p>
   </div>
-
 </div>
 ```
 
