@@ -129,4 +129,34 @@ console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 </div>
 ```
 
+### Conditionals
+
+**Conditional render blocks of HTML**
+
+```html
+<div class="content">
+  <div class="loggedin">
+    <p>Logged in</p>
+  </div>
+  <div class="loggedout">
+    <p>Not Logged in</p>
+  </div>
+</div>
+```
+
+```js
+var html = require('html-lang');
+console.log(html.render( { loggedin: false }, tmpl));
+```
+
+**outputs:**
+
+```html
+<div class="content">
+  <div class="loggedout">
+    <p>Not Logged in</p>
+  </div>
+</div>
+```
+
 # That's it. I challenge you to find a more complex use-case.
