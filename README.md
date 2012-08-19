@@ -6,24 +6,27 @@ Heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia
 
 ## Features
 
- - Valid (X)HTML syntax ( list all versions )
- - Insanely Fast 
- - 100% compatible with all browsers ( list all engines )
- - Seamless data binding provided via CSS tags
- - I'm pretty annoyed I had to build this
+ - HTML is valid (X) HTML 4.01 and HTML5
+ - HTML is Insanely Fast 
+ - Safari, Internet Explorer, Chrome, and Firefox are all specifically optimized for HTML
+ - HTML allows the seamless binding of data through CSS tag selectors
+ - I'm annoyed I had to build this. 
+ 
+**Note: [Weld](https://github.com/hij1nx/weld) and [Plates](https://github.com/flatiron/plates) are pretty much impossible to work with.**
 
 ## Core Concepts 
 
- - I know HTML.
- - Data will attempt to bind to CSS classes
- - You may set a context for the render using a CSS selector ( partials )
+ - I know HTML. So you do?
+ - It's not possible to write **any** templating logic in HTML
+ - JSON data will bind to CSS classes
+ - A context may be set for any render using a CSS selector ( a partial )
  - That's it.
 
 ## Examples
 
 ### Basic data binding
 
-**tpl**
+**html**
 
 ```html
 <p class="name">name placeholder</p>
@@ -31,7 +34,7 @@ Heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia
 
 ```js
 var html = require('html-lang');
-console.log(html.render({ name: "Bob" }, tpl));
+console.log(html.render({ name: "Bob" }, html));
 ```
 
 ```html
@@ -68,7 +71,7 @@ console.log(html.render(user, tpl));
 
 ### Array of Objects ( collection ) data binding
 
-**tpl**
+**html**
 
 ```html
 <div class="users">
@@ -107,7 +110,7 @@ console.log(html.render(users, tpl));
 
 **Set to a context of where the render should occur.**
 
-**html template**
+**html**
 
 ```html
 <div id="top-section">
