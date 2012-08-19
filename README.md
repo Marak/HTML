@@ -133,7 +133,7 @@ console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 
 **Conditionally render blocks of HTML using Boolean values**
 
-Setting a value to `Boolean false` indicates that class will be removed. That's it. Conditional logic propositions shouldn't exist in the View!
+Setting a value to `Boolean false` indicates the class will be removed during the render. That's it. Conditional logic propositions shouldn't exist in the View.  
 
 ```html
 <div class="content">
@@ -146,9 +146,9 @@ Setting a value to `Boolean false` indicates that class will be removed. That's 
 ```js
 var html = require('html-lang');
 
-var admin = true;
+var role = "admin";
 
-if(admin) {
+if(role === "admin") {
   console.log(html.render( { admin: true }, tmpl));
 } else {
   console.log(html.render( { admin: false }, tmpl));
@@ -168,9 +168,9 @@ if(admin) {
 ```js
 var html = require('html-lang');
 
-var admin = false;
+var role = "guest";
 
-if(admin) {
+if(role === "admin") {
   console.log(html.render( { admin: true }, tmpl));
 } else {
   console.log(html.render( { admin: false }, tmpl));
