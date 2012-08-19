@@ -8,6 +8,7 @@
  - HTML is Insanely Fast 
  - Safari, Internet Explorer, Chrome, and Firefox are all specifically optimized for HTML
  - HTML is `< 4 bytes` in size!
+ - It's not possible to write logic in HTML
  - I'm annoyed I had to build this. 
  
 *Note: I have no idea how to successfully use [Weld](https://github.com/hij1nx/weld) or [Plates](https://github.com/flatiron/plates).*
@@ -15,7 +16,6 @@
 ## Core Concepts 
 
  - I know HTML. So do you?
- - It's actually **impossible** to write **any** templating logic in HTML
  - JSON data binds to CSS classes
  - Partials can be achieved by using a CSS selector to establish rendering context
  - Conditionals are booleans, `true` or `false`
