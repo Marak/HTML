@@ -190,4 +190,4 @@ if(role === "admin") {
 </div>
 ```
 
-# That's it. I challenge you to find a more complex use-case.
+# That's it. I challenge you to find a use-case that isn't covered.
