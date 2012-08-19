@@ -88,5 +88,28 @@ console.log(html.render(users, tpl));
   </div>
 ```
 
-
 ### CSS Selectors / Partials
+
+**Set to a context of where the render should occur.**
+
+```js
+var html = require('html-lang');
+
+var tpl = '<div id="that-one">
+            <p data-bind="name">name placeholder</p>';
+           </div>
+           <div id="this-one">
+             <p data-bind="name">name placeholder</p>
+           </div>';
+
+console.log(html.render("#that-one", { name: "Bob" }, tpl));
+```
+
+```html
+<div id="that-one">
+  <p>Bob</p>
+</div>
+<div id="this-one">
+ <p data-bind="name">name placeholder</p>
+</div>
+```
