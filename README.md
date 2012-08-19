@@ -135,6 +135,8 @@ Setting a data value to `Boolean false` indicates the class will be removed duri
 
 That's it. Conditional logic propositions shouldn't exist in the View.  
 
+**logged in as admin:**
+
 ```html
 <div class="content">
   <div class="admin">
@@ -167,6 +169,8 @@ if(role === "admin") {
   </div>
 </div>
 ```
+
+**logged in as guest:**
 
 ```js
 var html = require('html-lang');
