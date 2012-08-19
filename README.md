@@ -17,9 +17,10 @@ HTML was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Vi
 ## Core Concepts 
 
  - I know HTML. So do you?
- - It's actually not possible to write **any** templating logic in HTML!
+ - It's actually **impossible** to write **any** templating logic in HTML
  - Data will attempt to bind to CSS classes
- - Partials can be achieved by using a CSS selector to establish render context.
+ - Partials can be achieved by using a CSS selector to establish render context
+ - Conditionals are booleans, `true` or `false`
  - That's it.
 
 ## Examples
