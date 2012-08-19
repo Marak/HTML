@@ -131,7 +131,9 @@ console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 
 **Conditionally render blocks of HTML using Boolean values**
 
-Setting a value to `Boolean false` indicates the class will be removed during the render. That's it. Conditional logic propositions shouldn't exist in the View.  
+Setting a data value to `Boolean false` indicates the class will be removed during the render. 
+
+That's it. Conditional logic propositions shouldn't exist in the View.  
 
 ```html
 <div class="content">
