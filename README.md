@@ -13,9 +13,9 @@
  
 *Note: I have no idea how to successfully use [Weld](https://github.com/hij1nx/weld) or [Plates](https://github.com/flatiron/plates).*
 
-## Core Concepts 
+## Core Concepts
 
- - I know HTML. So do you?
+ - You already know HTML
  - JSON data binds to CSS classes
  - Partials can be achieved by using a CSS selector to establish rendering context
  - Conditionals are booleans, `true` or `false`
