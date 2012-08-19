@@ -1,8 +1,8 @@
-# html
+# HTML
 
 **HTML is The BEST templating language EVER**.
 
-It was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia](http://github.com/visionmedia/)
+HTML was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia](http://github.com/visionmedia/)
 
 ## Features
 
@@ -18,9 +18,9 @@ It was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visi
 ## Core Concepts 
 
  - I know HTML. So you do?
- - It's not possible to write **any** templating logic in HTML
- - Data could be bound via CSS classes
- - A context may be set for any render using a CSS selector ( a partial! )
+ - It's actually not possible to write **any** templating logic in HTML!
+ - Data will attempt to bind to CSS classes
+ - Partials can be achieved by using a CSS selector to establish render context.
  - That's it.
 
 ## Examples
