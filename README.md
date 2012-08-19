@@ -153,9 +153,9 @@ var html = require('html-lang');
 var role = "admin";
 
 if(role === "admin") {
-  console.log(html.render( { admin: true, guest: false }, tmpl));
+  console.log(html.render( { guest: false }, tmpl));
 } else {
-  console.log(html.render( { admin: false, guest: true }, tmpl));
+  console.log(html.render( { admin: false }, tmpl));
 }
 ```
 
@@ -175,9 +175,9 @@ var html = require('html-lang');
 var role = "guest";
 
 if(role === "admin") {
-  console.log(html.render( { admin: true, guest: false }, tmpl));
+  console.log(html.render( { guest: false }, tmpl));
 } else {
-  console.log(html.render( { admin: false, guest: true }, tmpl));
+  console.log(html.render( { admin: false }, tmpl));
 }
 ```
 
