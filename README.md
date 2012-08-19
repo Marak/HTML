@@ -103,7 +103,7 @@ console.log(html.render(users, tmpl));
 
 ### Rendering a Partial with a CSS Selector
 
-**Set to a context of where the render should occur.**
+**Set the context of where the render should occur based on an arbitrary CSS selector.**
 
 ```html
 <div id="top-section">
