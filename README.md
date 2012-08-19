@@ -22,9 +22,14 @@ Heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia
 ### Basic data binding
 
 
+**html template**
+
+```html
+  <p data-bind="name">name placeholder</p>
+```
+
 ```js
 var html = require('html-lang');
-var tpl = '<p data-bind="name">name placeholder</p>';
 console.log(html.render({ name: "Bob" }, tpl));
 ```
 
@@ -34,15 +39,19 @@ console.log(html.render({ name: "Bob" }, tpl));
 
 ### Object data binding
 
+**html template**
+
+```html
+<div data-bind="user">
+  <p data-bind="name">name placeholder</p>
+  <p data-bind="email">email placeholder</p>
+</div>
+```
+
 ```js
 var html = require('html-lang');
 
 var user = { user: { name: "Bob", email: "bob@bob.com"}};
-
-var tpl = '<div data-bind="user">
-            <p data-bind="name">name placeholder</p>
-            <p data-bind="email">email placeholder</p>
-           </div>';
 
 console.log(html.render(user, tpl));
 ```
@@ -58,6 +67,17 @@ console.log(html.render(user, tpl));
 
 ### Array of Objects ( collection ) data binding
 
+**html template**
+
+```html
+<div data-bind="users">
+  <div data-bind="user">
+    <p data-bind="name">name placeholder</p>
+    <p data-bind="email">email placeholder</p
+  </div>
+</div>
+```
+
 ```js
 var html = require('html-lang');
 
@@ -66,12 +86,6 @@ var users = [
   { name: "Marak", email: "marak@marak.com"}
 ];
 
-var tpl = '<div data-bind="users">
-             <div data-bind="user">
-               <p data-bind="name">name placeholder</p>
-               <p data-bind="email">email placeholder</p
-             </div>
-           </div>';
 console.log(html.render(users, tpl));
 ```
 
