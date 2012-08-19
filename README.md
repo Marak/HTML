@@ -35,6 +35,7 @@ It was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visi
 var html = require('html-lang');
 console.log(html.render({ name: "Bob" }, html));
 ```
+**outputs:**
 
 ```html
 <p class="name">Bob</p>
@@ -87,6 +88,7 @@ var users = [
 
 console.log(html.render(users, tmpl));
 ```
+**outputs:**
 
 ```html
 <div>
@@ -118,6 +120,8 @@ console.log(html.render(users, tmpl));
 var html = require('html-lang');
 console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 ```
+
+**outputs:**
 
 ```html
 <div id="top-section">
