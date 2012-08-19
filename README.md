@@ -106,15 +106,19 @@ console.log(html.render(users, tpl));
 
 **Set to a context of where the render should occur.**
 
+**html template**
+
+```html
+<div id="that-one">
+  <p data-bind="name">name placeholder</p>
+</div>
+<div id="this-one">
+  <p data-bind="name">name placeholder</p>
+</div>
+```
+
 ```js
 var html = require('html-lang');
-
-var tpl = '<div id="that-one">
-            <p data-bind="name">name placeholder</p>';
-           </div>
-           <div id="this-one">
-             <p data-bind="name">name placeholder</p>
-           </div>';
 
 console.log(html.render("#that-one", { name: "Bob" }, tpl));
 ```
@@ -127,3 +131,5 @@ console.log(html.render("#that-one", { name: "Bob" }, tpl));
  <p data-bind="name">name placeholder</p>
 </div>
 ```
+
+# That's it. I challenge you to find a more complex use-case.
