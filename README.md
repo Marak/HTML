@@ -64,7 +64,10 @@ var tpl = '<div data-bind="users">
                <p data-bind="email">email placeholder</p
              </div>
            </div>';
-console.log(html.render({ users: [ { name: "Bob", email: "bob@bob.com"}, { name: "Marak", email: "marak@marak.com"}], tpl));
+console.log(html.render({ users: [ 
+  { name: "Bob", email: "bob@bob.com"}, 
+  { name: "Marak", email: "marak@marak.com"}
+], tpl));
 ```
 
 ```html
