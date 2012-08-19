@@ -13,21 +13,19 @@ It was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visi
  - HTML is `< 4 bytes` in size!
  - I'm annoyed I had to build this. 
  
-*Note: I have no idea how to use [Weld](https://github.com/hij1nx/weld) or [Plates](https://github.com/flatiron/plates). I've hit brick walls with both of these projects several times.*
+*Note: I have no idea how to successfully use [Weld](https://github.com/hij1nx/weld) or [Plates](https://github.com/flatiron/plates).*
 
 ## Core Concepts 
 
  - I know HTML. So you do?
  - It's not possible to write **any** templating logic in HTML
- - JSON data will bind to CSS classes
- - A context may be set for any render using a CSS selector ( a partial )
+ - Data could be bound via CSS classes
+ - A context may be set for any render using a CSS selector ( a partial! )
  - That's it.
 
 ## Examples
 
-### Basic data binding
-
-**html**
+### Rendering basic data
 
 ```html
 <p class="name">name placeholder</p>
@@ -42,9 +40,7 @@ console.log(html.render({ name: "Bob" }, html));
 <p>Bob</p>
 ```
 
-### Object data binding
-
-**tpl**
+### Rendering an Object
 
 ```html
 <div class="user">
@@ -70,9 +66,7 @@ console.log(html.render(user, tpl));
 </div>
 ```
 
-### Array of Objects ( collection ) data binding
-
-**html**
+### Rendering an Array of Objects ( collection )
 
 ```html
 <div class="users">
@@ -107,11 +101,9 @@ console.log(html.render(users, tpl));
 </div>
 ```
 
-### CSS Selectors / Partials
+### Rendering a Partial with a CSS Selector
 
 **Set to a context of where the render should occur.**
-
-**html**
 
 ```html
 <div id="top-section">
