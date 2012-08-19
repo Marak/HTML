@@ -36,7 +36,12 @@ console.log(html.render("Bob", tpl));
 
 ```js
 var html = require('html-lang');
-var tpl = '<div data-bind="user"><p data-bind="name">name placeholder</p><p data-bind="email">email placeholder</p</div>';
+
+var tpl = '<div data-bind="user">
+            <p data-bind="name">name placeholder</p>
+            <p data-bind="email">email placeholder</p>
+           </div>';
+
 console.log(html.render({ user: { name: "Bob", email: "bob@bob.com"}}, tpl));
 ```
 
@@ -51,24 +56,29 @@ console.log(html.render({ user: { name: "Bob", email: "bob@bob.com"}}, tpl));
 
 ### Array of Objects ( collection ) data binding
 
-  ```js
-  var html = require('html-lang');
-  var tpl = '<div data-bind="users"><div data-bind="user"><p data-bind="name">name placeholder</p><p data-bind="email">email placeholder</p</div></div>';
-  console.log(html.render({ users: [ { name: "Bob", email: "bob@bob.com"}, { name: "Marak", email: "marak@marak.com"}], tpl));
-  ```
+```js
+var html = require('html-lang');
+var tpl = '<div data-bind="users">
+             <div data-bind="user">
+               <p data-bind="name">name placeholder</p>
+               <p data-bind="email">email placeholder</p
+             </div>
+           </div>';
+console.log(html.render({ users: [ { name: "Bob", email: "bob@bob.com"}, { name: "Marak", email: "marak@marak.com"}], tpl));
+```
 
-  ```html
+```html
+  <div>
     <div>
-      <div>
-        <p>Bob</p>
-        <p>bob@bob.com</p>
-      </div>
-      <div>
-        <p>Marak</p>
-        <p>marak@marak.com</p>
-      </div>
+      <p>Bob</p>
+      <p>bob@bob.com</p>
     </div>
-  ```
+    <div>
+      <p>Marak</p>
+      <p>marak@marak.com</p>
+    </div>
+  </div>
+```
 
 
 ### CSS Selectors / Partials
