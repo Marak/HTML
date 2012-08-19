@@ -131,7 +131,7 @@ console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 
 ### Conditionals
 
-**Conditional render blocks of HTML**
+**Conditionally render blocks of HTML**
 
 ```html
 <div class="content">
