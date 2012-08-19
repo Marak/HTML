@@ -194,4 +194,4 @@ if(role === "admin") {
 </div>
 ```
 
-# That's it. I challenge you to find a use-case that isn't covered.
+# That's it. I challenge you to find a use-case that isn't covered by HTML.
