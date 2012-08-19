@@ -12,7 +12,7 @@ It was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visi
  - HTML allows the seamless binding of data through CSS tag selectors
  - I'm annoyed I had to build this. 
  
-**Note: I have no idea how to use [Weld](https://github.com/hij1nx/weld) or [Plates](https://github.com/flatiron/plates). I've hit brick walls with both of these projects several times.**
+*Note: I have no idea how to use [Weld](https://github.com/hij1nx/weld) or [Plates](https://github.com/flatiron/plates). I've hit brick walls with both of these projects several times.*
 
 ## Core Concepts 
 
