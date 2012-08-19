@@ -21,9 +21,10 @@ Heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia
 
 ### Basic
 
+
   ```js
   var html = require('html-lang');
-  var tpl = "<p data-bind="name">name placeholder</p>";
+  var tpl = '<p data-bind="name">name placeholder</p>';
   console.log(html.render("Bob", tpl));
   ```
 
