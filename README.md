@@ -7,25 +7,26 @@ Heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia
 ## Features
 
  - Valid (X)HTML syntax ( list all versions )
- - 100% compatible in all browsers ( list all engines )
+ - Insanely Fast 
+ - 100% compatible with all browsers ( list all engines )
  - Seamless data binding provided via CSS tags
+ - I'm pretty annoyed I had to build this
 
 ## Core Concepts 
 
  - I know HTML.
- - Data will attempt to bind to `data-bind` HTML5 data attributes.
- - You may set a context for the render using a CSS selector
- - Thats fucking it.
+ - Data will attempt to bind to CSS classes
+ - You may set a context for the render using a CSS selector ( partials )
+ - That's it.
 
 ## Examples
 
 ### Basic data binding
 
-
 **html template**
 
 ```html
-  <p data-bind="name">name placeholder</p>
+  <p class="name">name placeholder</p>
 ```
 
 ```js
@@ -42,9 +43,9 @@ console.log(html.render({ name: "Bob" }, tpl));
 **html template**
 
 ```html
-<div data-bind="user">
-  <p data-bind="name">name placeholder</p>
-  <p data-bind="email">email placeholder</p>
+<div class="user">
+  <p class="name">name placeholder</p>
+  <p class="email">email placeholder</p>
 </div>
 ```
 
@@ -70,10 +71,10 @@ console.log(html.render(user, tpl));
 **html template**
 
 ```html
-<div data-bind="users">
-  <div data-bind="user">
-    <p data-bind="name">name placeholder</p>
-    <p data-bind="email">email placeholder</p
+<div class="users">
+  <div class="user">
+    <p class="name">name placeholder</p>
+    <p class="email">email placeholder</p
   </div>
 </div>
 ```
@@ -110,10 +111,10 @@ console.log(html.render(users, tpl));
 
 ```html
 <div id="top-section">
-  <p data-bind="name">name placeholder</p>
+  <p class="name">name placeholder</p>
 </div>
 <div id="bottom-section">
-  <p data-bind="name">name placeholder</p>
+  <p class="name">name placeholder</p>
 </div>
 ```
 
