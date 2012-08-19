@@ -1,4 +1,4 @@
-# HTML is The BEST templating language EVER
+# HTML is The BEST JavaScript templating language EVER
 
 **HTML was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia](http://github.com/visionmedia/)**
 
