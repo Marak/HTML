@@ -140,6 +140,10 @@ Setting a value to `Boolean false` indicates the class will be removed during th
   <div class="admin">
     <p>Hello Admin</p>
   </div>
+  <div class="guest">
+    <p>Hello Guest</p>
+  </div>
+
 </div>
 ```
 
@@ -149,9 +153,9 @@ var html = require('html-lang');
 var role = "admin";
 
 if(role === "admin") {
-  console.log(html.render( { admin: true }, tmpl));
+  console.log(html.render( { admin: true, guest: false }, tmpl));
 } else {
-  console.log(html.render( { admin: false }, tmpl));
+  console.log(html.render( { admin: false, guest: true }, tmpl));
 }
 ```
 
@@ -171,9 +175,9 @@ var html = require('html-lang');
 var role = "guest";
 
 if(role === "admin") {
-  console.log(html.render( { admin: true }, tmpl));
+  console.log(html.render( { admin: true, guest: false }, tmpl));
 } else {
-  console.log(html.render( { admin: false }, tmpl));
+  console.log(html.render( { admin: false, guest: true }, tmpl));
 }
 ```
 
@@ -181,6 +185,9 @@ if(role === "admin") {
 
 ```html
 <div class="content">
+  <div class="guest">
+    <p>Hello Guest</p>
+  </div>
 </div>
 ```
 
