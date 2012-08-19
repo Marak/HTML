@@ -9,7 +9,6 @@ HTML was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Vi
  - HTML is valid (X) HTML 4.01 and HTML5
  - HTML is Insanely Fast 
  - Safari, Internet Explorer, Chrome, and Firefox are all specifically optimized for HTML
- - HTML allows the seamless binding of data through CSS tag selectors
  - HTML is `< 4 bytes` in size!
  - I'm annoyed I had to build this. 
  
