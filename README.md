@@ -131,31 +131,56 @@ console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 
 ### Conditionals
 
-**Conditionally render blocks of HTML**
+**Conditionally render blocks of HTML using Boolean values**
+
+Setting a value to `Boolean false` indicates that class will be removed. That's it. Conditional logic propositions shouldn't exist in the View!
 
 ```html
 <div class="content">
-  <div class="loggedin">
-    <p>Logged in</p>
-  </div>
-  <div class="loggedout">
-    <p>Not Logged in</p>
+  <div class="admin">
+    <p>Hello Admin</p>
   </div>
 </div>
 ```
 
 ```js
 var html = require('html-lang');
-console.log(html.render( { loggedin: false }, tmpl));
+
+var admin = true;
+
+if(admin) {
+  console.log(html.render( { admin: true }, tmpl));
+} else {
+  console.log(html.render( { admin: false }, tmpl));
+}
 ```
 
 **outputs:**
 
 ```html
 <div class="content">
-  <div class="loggedout">
-    <p>Not Logged in</p>
+  <div class="admin">
+    <p>Hello Admin</p>
   </div>
+</div>
+```
+
+```js
+var html = require('html-lang');
+
+var admin = false;
+
+if(admin) {
+  console.log(html.render( { admin: true }, tmpl));
+} else {
+  console.log(html.render( { admin: false }, tmpl));
+}
+```
+
+**outputs:**
+
+```html
+<div class="content">
 </div>
 ```
 
