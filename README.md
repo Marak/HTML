@@ -37,7 +37,7 @@ console.log(html.render({ name: "Bob" }, html));
 ```
 
 ```html
-<p>Bob</p>
+<p class="name">Bob</p>
 ```
 
 ### Rendering an Object
@@ -52,9 +52,9 @@ console.log(html.render({ name: "Bob" }, html));
 ```js
 var html = require('html-lang');
 
-var user = { user: { name: "Bob", email: "bob@bob.com"}};
+var user = { user: { name: "Bob", email: "bob@bob.com" }};
 
-console.log(html.render(user, tpl));
+console.log(html.render(user, tmpl));
 ```
 
 **outputs:**
@@ -85,7 +85,7 @@ var users = [
   { name: "Marak", email: "marak@marak.com"}
 ];
 
-console.log(html.render(users, tpl));
+console.log(html.render(users, tmpl));
 ```
 
 ```html
@@ -116,7 +116,7 @@ console.log(html.render(users, tpl));
 
 ```js
 var html = require('html-lang');
-console.log(html.render("#top-section", { name: "Bob" }, tpl));
+console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 ```
 
 ```html
