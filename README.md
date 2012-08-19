@@ -25,7 +25,7 @@ Heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia
 ```js
 var html = require('html-lang');
 var tpl = '<p data-bind="name">name placeholder</p>';
-console.log(html.render("Bob", tpl));
+console.log(html.render({ name: "Bob" }, tpl));
 ```
 
 ```html
@@ -37,12 +37,14 @@ console.log(html.render("Bob", tpl));
 ```js
 var html = require('html-lang');
 
+var user = { user: { name: "Bob", email: "bob@bob.com"}};
+
 var tpl = '<div data-bind="user">
             <p data-bind="name">name placeholder</p>
             <p data-bind="email">email placeholder</p>
            </div>';
 
-console.log(html.render({ user: { name: "Bob", email: "bob@bob.com"}}, tpl));
+console.log(html.render(user, tpl));
 ```
 
 **outputs:**
@@ -58,16 +60,19 @@ console.log(html.render({ user: { name: "Bob", email: "bob@bob.com"}}, tpl));
 
 ```js
 var html = require('html-lang');
+
+var users = [ 
+  { name: "Bob", email: "bob@bob.com"}, 
+  { name: "Marak", email: "marak@marak.com"}
+];
+
 var tpl = '<div data-bind="users">
              <div data-bind="user">
                <p data-bind="name">name placeholder</p>
                <p data-bind="email">email placeholder</p
              </div>
            </div>';
-console.log(html.render({ users: [ 
-  { name: "Bob", email: "bob@bob.com"}, 
-  { name: "Marak", email: "marak@marak.com"}
-], tpl));
+console.log(html.render(users, tpl));
 ```
 
 ```html
