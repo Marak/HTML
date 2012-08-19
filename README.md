@@ -109,26 +109,22 @@ console.log(html.render(users, tpl));
 **html template**
 
 ```html
-<div id="that-one">
+<div id="top-section">
   <p data-bind="name">name placeholder</p>
 </div>
-<div id="this-one">
+<div id="bottom-section">
   <p data-bind="name">name placeholder</p>
 </div>
 ```
 
 ```js
 var html = require('html-lang');
-
-console.log(html.render("#that-one", { name: "Bob" }, tpl));
+console.log(html.render("#top-section", { name: "Bob" }, tpl));
 ```
 
 ```html
-<div id="that-one">
+<div id="top-section">
   <p>Bob</p>
-</div>
-<div id="this-one">
- <p data-bind="name">name placeholder</p>
 </div>
 ```
 
