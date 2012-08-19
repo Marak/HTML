@@ -23,10 +23,10 @@ Heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia
 
 ### Basic data binding
 
-**html template**
+**tpl**
 
 ```html
-  <p class="name">name placeholder</p>
+<p class="name">name placeholder</p>
 ```
 
 ```js
@@ -40,7 +40,7 @@ console.log(html.render({ name: "Bob" }, tpl));
 
 ### Object data binding
 
-**html template**
+**tpl**
 
 ```html
 <div class="user">
@@ -61,14 +61,14 @@ console.log(html.render(user, tpl));
 
 ```html
 <div>
-  <p>Bob</p>
-  <p>bob@bob.com</p>
+  <p class="name">Bob</p>
+  <p class="email">bob@bob.com</p>
 </div>
 ```
 
 ### Array of Objects ( collection ) data binding
 
-**html template**
+**tpl**
 
 ```html
 <div class="users">
@@ -91,16 +91,16 @@ console.log(html.render(users, tpl));
 ```
 
 ```html
+<div>
   <div>
-    <div>
-      <p>Bob</p>
-      <p>bob@bob.com</p>
-    </div>
-    <div>
-      <p>Marak</p>
-      <p>marak@marak.com</p>
-    </div>
+    <p>Bob</p>
+    <p>bob@bob.com</p>
   </div>
+  <div>
+    <p>Marak</p>
+    <p>marak@marak.com</p>
+  </div>
+</div>
 ```
 
 ### CSS Selectors / Partials
