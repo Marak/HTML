@@ -9,9 +9,9 @@
  - Safari, Internet Explorer, Chrome, and Firefox are all specifically optimized for HTML
  - HTML is `< 4 bytes` in size!
  - It's not possible to write logic in HTML
- - I'm annoyed I had to build this. 
+ - I'm pretty annoyed I had to build this. 
  
-*Note: I have no idea how to successfully use [Weld](https://github.com/hij1nx/weld) or [Plates](https://github.com/flatiron/plates).*
+*Note: I have no fucking clue how to successfully use [Weld](https://github.com/hij1nx/weld) or [Plates](https://github.com/flatiron/plates).*
 
 ## Core Concepts
 
@@ -25,14 +25,15 @@
 
 ### Rendering basic data
 
+```js
+var html = require('html-lang');
+console.log(html.render({ name: "Bob" }, tmpl));
+```
+
 ```html
 <p class="name">name placeholder</p>
 ```
 
-```js
-var html = require('html-lang');
-console.log(html.render({ name: "Bob" }, html));
-```
 **outputs:**
 
 ```html
@@ -41,19 +42,19 @@ console.log(html.render({ name: "Bob" }, html));
 
 ### Rendering an Object
 
-```html
-<div class="user">
-  <p class="name">name placeholder</p>
-  <p class="email">email placeholder</p>
-</div>
-```
-
 ```js
 var html = require('html-lang');
 
 var user = { user: { name: "Bob", email: "bob@bob.com" }};
 
 console.log(html.render(user, tmpl));
+```
+
+```html
+<div class="user">
+  <p class="name">name placeholder</p>
+  <p class="email">email placeholder</p>
+</div>
 ```
 
 **outputs:**
@@ -67,15 +68,6 @@ console.log(html.render(user, tmpl));
 
 ### Rendering an Array of Objects ( collection )
 
-```html
-<div class="users">
-  <div class="user">
-    <p class="name">name placeholder</p>
-    <p class="email">email placeholder</p
-  </div>
-</div>
-```
-
 ```js
 var html = require('html-lang');
 
@@ -86,6 +78,17 @@ var users = [
 
 console.log(html.render(users, tmpl));
 ```
+
+
+```html
+<div class="users">
+  <div class="user">
+    <p class="name">name placeholder</p>
+    <p class="email">email placeholder</p
+  </div>
+</div>
+```
+
 **outputs:**
 
 ```html
@@ -105,6 +108,11 @@ console.log(html.render(users, tmpl));
 
 **Set the context of where the render should occur based on an arbitrary CSS selector.**
 
+```js
+var html = require('html-lang');
+console.log(html.render("#top-section", { name: "Bob" }, tmpl));
+```
+
 ```html
 <div id="top-section">
   <p class="name">name placeholder</p>
@@ -112,11 +120,6 @@ console.log(html.render(users, tmpl));
 <div id="bottom-section">
   <p class="name">name placeholder</p>
 </div>
-```
-
-```js
-var html = require('html-lang');
-console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 ```
 
 **outputs:**
@@ -192,6 +195,41 @@ if(role === "admin") {
     <p>Hello Guest</p>
   </div>
 </div>
+```
+
+
+### Nested layouts
+
+```html
+<p class="name">name placeholder</p>
+<div class="creatures"></div>
+```
+
+```js
+var html = require('html-lang');
+
+var data = {
+  
+  sessionName: "Sam",
+  
+  welcome: "Hello there!",
+  
+  creatures: [ 
+    { name: "Bob", email: "bob@bob.com"}, 
+    { name: "Marak", email: "marak@marak.com"},
+    { name: "Foo", email: "foo@bar.com"}
+  ]
+  
+};
+
+
+
+console.log(html.render(data, tmpl, tmpl));
+```
+**outputs:**
+
+```html
+<p class="name">Bob</p>
 ```
 
 # That's it. I challenge you to find a use-case that isn't covered by HTML.
