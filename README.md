@@ -132,75 +132,7 @@ console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 </div>
 ```
 
-### Conditionals
-
-**Conditionally render blocks of HTML using Boolean values**
-
-Setting a data value to `Boolean false` indicates the class will be removed during the render. 
-
-That's it. Conditional logic propositions shouldn't exist in the View.  
-
-**logged in as admin:**
-
-```html
-<div class="content">
-  <div class="admin">
-    <p>Hello Admin</p>
-  </div>
-  <div class="guest">
-    <p>Hello Guest</p>
-  </div>
-</div>
-```
-
-```js
-var html = require('html-lang');
-
-var role = "admin";
-
-if(role === "admin") {
-  console.log(html.render( { guest: false }, tmpl));
-} else {
-  console.log(html.render( { admin: false }, tmpl));
-}
-```
-
-**outputs:**
-
-```html
-<div class="content">
-  <div class="admin">
-    <p>Hello Admin</p>
-  </div>
-</div>
-```
-
-**logged in as guest:**
-
-```js
-var html = require('html-lang');
-
-var role = "guest";
-
-if(role === "admin") {
-  console.log(html.render( { guest: false }, tmpl));
-} else {
-  console.log(html.render( { admin: false }, tmpl));
-}
-```
-
-**outputs:**
-
-```html
-<div class="content">
-  <div class="guest">
-    <p>Hello Guest</p>
-  </div>
-</div>
-```
-
-
-### Nested layouts
+### Complex layouts
 
 ```html
 <p class="name">name placeholder</p>
