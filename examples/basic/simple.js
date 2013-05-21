@@ -1,4 +1,4 @@
-var html = require('../lib/html');
+var html = require('html-lang');
 
 var tpl = '<p class="name">name placeholder</p>';
 

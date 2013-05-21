@@ -1,8 +1,8 @@
-var html = require('../lib/html');
+var html = require('../../lib/html');
 
 var fs = require('fs');
 
-var tmpl = fs.readFileSync('./examples/view/index.html').toString();
+var tmpl = fs.readFileSync('./examples/complex/index.html').toString();
 
 var data = {
   
@@ -15,7 +15,7 @@ var data = {
     { name: "Marak", email: "marak@marak.com"},
     { name: "Foo", email: "foo@bar.com"}
   ]
-  
+
 };
 
 

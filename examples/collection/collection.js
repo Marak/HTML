@@ -1,4 +1,4 @@
-var html = require('../lib/html');
+var html = require('html-lang');
 
 var tpl = '<div class="users">\
             <div class="user">\
@@ -8,11 +8,9 @@ var tpl = '<div class="users">\
           </div>';
 
 var users = [ 
+  { name: "Foo", email: "foo@bar.com"},
   { name: "Bob", email: "bob@bob.com"}, 
-  { name: "Marak", email: "marak@marak.com"},
-  { name: "Foo", email: "foo@bar.com"}
-  
+  { name: "Marak", email: "marak@marak.com"}
 ];
 
 console.log(html.render({ users: users }, tpl));
-
