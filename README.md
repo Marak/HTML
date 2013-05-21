@@ -4,9 +4,10 @@
 
 ## Features
 
- - HTML is valid (X) HTML 4.01 and HTML5
- - HTML is Insanely Fast 
- - Safari, Internet Explorer, Chrome, and Firefox are all specifically optimized for HTML
+ - HTML is valid (X) HTML 4.01 and HTML5!
+ - HTML is Insanely Fast !
+ - Safari, Internet Explorer, Chrome, and Firefox are all specifically optimized for rendering HTML!
+ - HTML is highly portable ( Even tested it in Microsoft Frontpage and Macromedia Dreamweaver )
  - HTML is `< 4 bytes` in size!
  - It's not possible to write logic in HTML
  - I'm pretty annoyed I had to build this. 
@@ -16,10 +17,11 @@
 ## Core Concepts
 
  - You already know HTML
- - JSON data binds to CSS classes
- - Partials can be achieved by using a CSS selector to establish rendering context
- - Conditionals are booleans, `true` or `false`
- - That's it. No special maps or DSLs. You don't need them.
+ - JSON data automatically maps to CSS classes
+ - Partials automatically map to CSS classes
+ - Conditionals are boolean values, `true` or `false`
+ - You cannot define any custom logic or maps with HTML
+ - That's it.
 
 ## Examples
 
