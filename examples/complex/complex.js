@@ -12,7 +12,7 @@ var data = {
   
   users: [ 
     { name: "Bob", email: "bob@bob.com"}, 
-    { name: "Marak", email: "marak@marak.com"},
+    { name: "Marak", email: "marak@marak.com", 'name.href': "http://marak.com"},
     { name: "Foo", email: "foo@bar.com"}
   ]
 
