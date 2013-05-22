@@ -1,0 +1,19 @@
+{
+  "name": "html-lang",
+  "version": "0.1.0",
+  "description": "**HTML was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia](http://github.com/visionmedia/)**",
+  "main": "lib/html.js",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Marak/html.git"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}
