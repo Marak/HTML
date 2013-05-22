@@ -60,7 +60,7 @@ console.log(html.render(user, tmpl));
 **outputs:**
 
 ```html
-<div>
+<div class="user">
   <p class="name">Bob</p>
   <p class="email">bob@bob.com</p>
 </div>
@@ -92,12 +92,12 @@ console.log(html.render(users, tmpl));
 **outputs:**
 
 ```html
-<div>
-  <div>
+<div class="users">
+  <div class="user">
     <p>Bob</p>
     <p>bob@bob.com</p>
   </div>
-  <div>
+  <div class="user">
     <p>Marak</p>
     <p>marak@marak.com</p>
   </div>
