@@ -1,6 +1,6 @@
 {
   "name": "html-lang",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "**HTML was heavily inspired by [Jade](http://github.com/visionmedia/jade) from [Visionmedia](http://github.com/visionmedia/)**",
   "main": "lib/html.js",
   "directories": {
