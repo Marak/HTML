@@ -18,8 +18,6 @@
 
  - You already know HTML
  - JSON data automatically maps to CSS classes
- - Partials automatically map to CSS classes
- - Conditionals are boolean values, `true` or `false`
  - You cannot define any custom logic or maps with HTML
  - That's it.
 
@@ -132,38 +130,26 @@ console.log(html.render("#top-section", { name: "Bob" }, tmpl));
 </div>
 ```
 
-### Complex layouts
+### XML Node Attributes
 
 ```html
-<p class="name">name placeholder</p>
-<div class="creatures"></div>
+<p class="name"><a href="" class="link"></a></p>
 ```
 
 ```js
 var html = require('html-lang');
 
-var data = {
-  
-  sessionName: "Sam",
-  
-  welcome: "Hello there!",
-  
-  creatures: [ 
-    { name: "Bob", email: "bob@bob.com"}, 
-    { name: "Marak", email: "marak@marak.com"},
-    { name: "Foo", email: "foo@bar.com"}
-  ]
-  
+var data = { 
+  'link': "The big website", 
+  'link.href': "http://big.vc" 
 };
 
-
-
-console.log(html.render(data, tmpl, tmpl));
+console.log(html.render(data, tmpl));
 ```
 **outputs:**
 
 ```html
-<p class="name">Bob</p>
+<p class="name"><a href="http://big.vc" class="link">The big website</a></p>
 ```
 
 # That's it. I challenge you to find a use-case that isn't covered by HTML.
