@@ -104,32 +104,6 @@ console.log(html.render(users, tmpl));
 </div>
 ```
 
-### Rendering a Partial with a CSS Selector
-
-**Set the context of where the render should occur based on an arbitrary CSS selector.**
-
-```js
-var html = require('html-lang');
-console.log(html.render("#top-section", { name: "Bob" }, tmpl));
-```
-
-```html
-<div id="top-section">
-  <p class="name">name placeholder</p>
-</div>
-<div id="bottom-section">
-  <p class="name">name placeholder</p>
-</div>
-```
-
-**outputs:**
-
-```html
-<div id="top-section">
-  <p>Bob</p>
-</div>
-```
-
 ### XML Node Attributes
 
 ```html
