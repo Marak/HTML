@@ -84,7 +84,7 @@ console.log(html.render(users, tmpl));
 <div class="users">
   <div class="user">
     <p class="name">name placeholder</p>
-    <p class="email">email placeholder</p
+    <p class="email">email placeholder</p>
   </div>
 </div>
 ```
